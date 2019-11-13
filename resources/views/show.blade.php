@@ -24,6 +24,12 @@
                             </div>
                         </div>
                     </form>
+                    <div class="card-footer">
+                        <h5 class="text-danger">Do't use these keywords (the system will automatically  block you ) </h5>
+                        @foreach($blacklist as $keyword)
+                            <span class="badge badge-pill badge-primary lead">{{ $keyword['keyword'] }}</span>
+                        @endforeach
+                    </div>
                 </div>
 
                 <br>
