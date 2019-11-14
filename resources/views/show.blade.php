@@ -54,7 +54,7 @@
                 <h3 class="card-title"><i class="fa fa-thumbs-up"></i> Likers</h3>
                 @foreach($twit->likes as $like)
                     <div class="card" style="margin-bottom: 5px;">
-                        <div class="card-header bg-white text-primary">{{  '@'.$reply->user->name }}</div>
+                        <div class="card-header bg-white text-primary">{{  $like->user->name }}</div>
 
                     </div>
 

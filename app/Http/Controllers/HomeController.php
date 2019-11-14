@@ -31,7 +31,6 @@
 			$twits = Twitt::with('user','replies.user','likes')->orderByDesc("id")->paginate(10);
 			
 			
-			
 			$users = User::all();
 			
 			return view('home',compact('twits','users'));
@@ -102,6 +101,7 @@
 		public function show(Twitt $twit)
 		{
 			$twit = $twit->load('replies.user','likes.user');
+			
 			
 			$blacklist = BlockedKeyword::all();
 			return view('show',compact('twit','blacklist'));
